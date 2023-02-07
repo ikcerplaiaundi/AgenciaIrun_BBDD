@@ -1,6 +1,6 @@
 package objetos;
 
-public class Habitaciones {
+public class Habitacion {
 public int id ;	
 public int id_hotel ;
 public String numero ;
