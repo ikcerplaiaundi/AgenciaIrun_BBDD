@@ -1,6 +1,6 @@
 package objetos;
 
-public class Clientes {
+public class Cliente {
 
 	String dni;
 	String nombre;
@@ -8,11 +8,11 @@ public class Clientes {
 	String direccion;
 	String localidad;
 	
-	public Clientes() {
+	public Cliente() {
 		
 	}
 	
-	public Clientes(String dni, String nombre, String apellido, String direccion, String localidad) {
+	public Cliente(String dni, String nombre, String apellido, String direccion, String localidad) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
