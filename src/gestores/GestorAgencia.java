@@ -18,29 +18,29 @@ public class GestorAgencia {
 			opc = Integer.parseInt(sc.nextLine());
 
 			while (opc < Menu.SALIR || opc > Menu.GESTION_RESERVAS) {
-				
+
 				System.out.println("!Error¡ Introduce un valor valido");
 
 				Menu.menuPrincipal();
 
 				opc = Integer.parseInt(sc.nextLine());
 			}
-			
+
 			switch (opc) {
 			case Menu.GESTION_CLIENTES:
-				
+
 				break;
 
 			case Menu.GESTION_HABITACIONES:
-				
+
 				break;
-				
+
 			case Menu.GESTION_HOTELES:
-				
+
 				break;
-				
+
 			case Menu.GESTION_RESERVAS:
-				
+
 				break;
 			case Menu.SALIR:
 				break;
