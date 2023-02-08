@@ -28,15 +28,34 @@ public class FormularioDatos {
 		return cliente;
 	}
 
-	public static int pedirDNICliente(Scanner sc) {
+	public static String pedirDNICliente(Scanner sc) {
 		
-		int DNICliente;
+		String DNICliente;
 
 		System.out.println("Introduce el DNI que quieres eliminar");
-		DNICliente = Integer.parseInt(sc.nextLine());
+		DNICliente = sc.nextLine();
 		
 		return DNICliente;
 		
+	}
+	
+	public static Cliente modCliente(Cliente cliente, Scanner sc) {
+		
+		cliente.setDni(pedirDNICliente(sc));
+		
+		System.out.println("Introduce el nombre modificado");
+		cliente.setNombre(sc.nextLine());
+		
+		System.out.println("Introduce el apellido modificado");
+		cliente.setApellido(sc.nextLine());
+		
+		System.out.println("Introduce la nueva direccion");
+		cliente.setDireccion(sc.nextLine());
+		
+		System.out.println("Introduce la nueva poblacion");
+		cliente.setLocalidad(sc.nextLine());
+		
+		return cliente;
 	}
 
 }
