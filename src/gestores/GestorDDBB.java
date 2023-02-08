@@ -27,14 +27,14 @@ public class GestorDDBB extends Conexion {
 		}
 	}
 	
-	public void eliminarCliente(int DNI) {
+	public void eliminarCliente(String DNI) {
 		
 		String EliminarCliente = "DELETE FROM clientes WHERE dni= ?";
 		
 		try {
 			
 			PreparedStatement stDelete = super.cn.prepareStatement(EliminarCliente);
-			stDelete.setInt(1, DNI);
+			stDelete.setString(1, DNI);
 			
 			stDelete.executeUpdate();
 			
@@ -44,5 +44,7 @@ public class GestorDDBB extends Conexion {
 		}
 		
 	}
+	
+	//TODO HAY QUE HACER EL METODO PARA PODER MODIFICAR LA INFO DEL CLEINTE
 	
 }
