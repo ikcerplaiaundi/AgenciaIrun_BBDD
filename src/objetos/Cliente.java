@@ -7,11 +7,11 @@ public class Cliente {
 	String apellido;
 	String direccion;
 	String localidad;
-	
+
 	public Cliente() {
-		
+
 	}
-	
+
 	public Cliente(String dni, String nombre, String apellido, String direccion, String localidad) {
 		super();
 		this.dni = dni;
@@ -60,11 +60,10 @@ public class Cliente {
 	public void setLocalidad(String localidad) {
 		this.localidad = localidad;
 	}
-	
+
 	public String toString() {
 		return "Clientes [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion
 				+ ", localidad=" + localidad + "]";
 	}
-	
-}
 
+}
