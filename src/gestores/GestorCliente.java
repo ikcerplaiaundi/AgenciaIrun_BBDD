@@ -43,6 +43,7 @@ public class GestorCliente {
 				gestorDDBB.insertarClientes(cliente);
 				gestorDDBB.cerrarConexion();
 				
+				System.out.println("----------USUARIO AÑADIDO----------");
 				
 				break;
 				
@@ -55,15 +56,17 @@ public class GestorCliente {
 				gestorDDBB.eliminarCliente(DNI);
 				gestorDDBB.cerrarConexion();
 				
+				System.out.println("----------USUARIO ELIMINADO----------");
+				
 				break;
 			
 			case Menu.MODIFICAR_CLIENTE:
 				
-				String DNI_mod;
-				
-				gestorDDBB.abrirConexion();
-				DNI_mod = FormularioDatos.modCliente(cliente, sc);
-				gestorDDBB.
+//				String DNI_mod;
+//				
+//				gestorDDBB.abrirConexion();
+//				DNI_mod = FormularioDatos.modCliente(cliente, sc);
+//				gestorDDBB.
 				
 				
 				break;
