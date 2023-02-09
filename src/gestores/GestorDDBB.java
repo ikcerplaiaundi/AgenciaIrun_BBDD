@@ -45,6 +45,27 @@ public class GestorDDBB extends Conexion {
 		
 	}
 	
-	//TODO HAY QUE HACER EL METODO PARA PODER MODIFICAR LA INFO DEL CLEINTE
+	public void modificarCliente(Cliente cliente) {
+		
+		String modificarCliente = "UPDATE clientes SET nombre = ?, apellidos = ?, direccion = ?, localidad = ? WHERE dni = ?";
+		
+		try {
+			
+			PreparedStatement stmodificarCliente = super.cn.prepareStatement(modificarCliente);
+			
+			stmodificarCliente.setString(1, cliente.getNombre());
+			stmodificarCliente.setString(2, cliente.getApellido());
+			stmodificarCliente.setString(3, cliente.getDireccion());
+			stmodificarCliente.setString(4, cliente.getDireccion());
+			stmodificarCliente.setString(5, cliente.getDni());
+			
+			stmodificarCliente.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 }
