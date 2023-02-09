@@ -52,7 +52,7 @@ public class GestorCliente {
 				String DNI;
 				
 				gestorDDBB.abrirConexion();
-				DNI = FormularioDatos.pedirDNICliente(sc);
+				DNI = FormularioDatos.pedirDNIClienteEliminar(sc);
 				gestorDDBB.eliminarCliente(DNI);
 				gestorDDBB.cerrarConexion();
 				
@@ -62,11 +62,12 @@ public class GestorCliente {
 			
 			case Menu.MODIFICAR_CLIENTE:
 				
-//				String DNI_mod;
-//				
-//				gestorDDBB.abrirConexion();
-//				DNI_mod = FormularioDatos.modCliente(cliente, sc);
-//				gestorDDBB.
+				Cliente cliente_mod = new Cliente();
+				
+				gestorDDBB.abrirConexion();
+				cliente_mod = FormularioDatos.modCliente(cliente_mod, sc);
+				gestorDDBB.modificarCliente(cliente_mod);
+				gestorDDBB.cerrarConexion();
 				
 				
 				break;

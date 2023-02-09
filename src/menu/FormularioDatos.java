@@ -28,7 +28,7 @@ public class FormularioDatos {
 		return cliente;
 	}
 
-	public static String pedirDNICliente(Scanner sc) {
+	public static String pedirDNIClienteEliminar(Scanner sc) {
 		
 		String DNICliente;
 
@@ -39,9 +39,21 @@ public class FormularioDatos {
 		
 	}
 	
+public static String pedirDNIClienteModificar(Scanner sc) {
+		
+		String DNICliente;
+
+		System.out.println("Introduce el DNI que quieres modificar");
+		DNICliente = sc.nextLine();
+		
+		return DNICliente;
+		
+	}
+	
+	
 	public static Cliente modCliente(Cliente cliente, Scanner sc) {
 		
-		cliente.setDni(pedirDNICliente(sc));
+		cliente.setDni(pedirDNIClienteModificar(sc));
 		
 		System.out.println("Introduce el nombre modificado");
 		cliente.setNombre(sc.nextLine());
